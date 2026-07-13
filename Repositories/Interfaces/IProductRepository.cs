@@ -12,6 +12,10 @@ namespace RetailPosSystem.Repositories.Interfaces
 
         Task<bool> BarcodeExistsAsync(string barcode);
 
+        Task<List<Product>> SearchProductsAsync(string? searchText, int pageNumber, int pageSize);
+
+        Task<int> GetProductSearchCountAsync(string? searchText);
+
         Task AddAsync(Product product);
 
         void Update(Product product);

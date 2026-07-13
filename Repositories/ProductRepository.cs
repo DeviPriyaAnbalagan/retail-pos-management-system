@@ -36,6 +36,24 @@ namespace RetailPosSystem.Repositories
             return await _context.Products.AnyAsync(p => p.Barcode == barcode);
         }
 
+        public async Task<List<Product>> SearchProductsAsync(string? searchText, int pageNumber, int pageSize)
+        {
+            var query = BuildSearchQuery(searchText);
+
+            return await query
+                .OrderBy(p => p.Name)
+                .Skip((pageNumber - 1) * pageSize)
+                .Take(pageSize)
+                .ToListAsync();
+        }
+
+        public async Task<int> GetProductSearchCountAsync(string? searchText)
+        {
+            var query = BuildSearchQuery(searchText);
+
+            return await query.CountAsync();
+        }
+
         public async Task AddAsync(Product product)
         {
             await _context.Products.AddAsync(product);
@@ -49,6 +67,23 @@ namespace RetailPosSystem.Repositories
         public async Task SaveChangesAsync()
         {
             await _context.SaveChangesAsync();
+        }
+
+        private IQueryable<Product> BuildSearchQuery(string? searchText)
+        {
+            var query = _context.Products
+                .Where(p => p.IsActive);
+
+            if (!string.IsNullOrWhiteSpace(searchText))
+            {
+                var search = searchText.ToLower();
+
+                query = query.Where(p =>
+                    p.Name.ToLower().Contains(search) ||
+                    p.Barcode.ToLower().Contains(search));
+            }
+
+            return query;
         }
     }
 }

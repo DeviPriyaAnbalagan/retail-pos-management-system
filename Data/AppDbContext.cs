@@ -22,6 +22,9 @@ namespace RetailPosSystem.Data
                 .IsUnique();
 
             modelBuilder.Entity<Product>()
+    .HasIndex(p => p.Name);
+
+            modelBuilder.Entity<Product>()
                 .Property(p => p.Price)
                 .HasPrecision(18, 2);
 

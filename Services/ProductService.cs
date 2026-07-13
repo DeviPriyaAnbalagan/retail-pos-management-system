@@ -129,6 +129,33 @@ namespace RetailPosSystem.Services
             return true;
         }
 
+        public async Task<ProductSearchResponseDto> SearchProductsAsync(string? searchText, int pageNumber, int pageSize)
+        {
+            if (pageNumber <= 0)
+                pageNumber = 1;
+
+            if (pageSize <= 0)
+                pageSize = 10;
+
+            if (pageSize > 50)
+                pageSize = 50;
+
+            var products = await _productRepository.SearchProductsAsync(searchText, pageNumber, pageSize);
+
+            var totalCount = await _productRepository.GetProductSearchCountAsync(searchText);
+
+            var totalPages = (int)Math.Ceiling(totalCount / (double)pageSize);
+
+            return new ProductSearchResponseDto
+            {
+                Products = products.Select(MapToResponseDto).ToList(),
+                TotalCount = totalCount,
+                PageNumber = pageNumber,
+                PageSize = pageSize,
+                TotalPages = totalPages
+            };
+        }
+
         private static ProductResponseDto MapToResponseDto(Product product)
         {
             return new ProductResponseDto

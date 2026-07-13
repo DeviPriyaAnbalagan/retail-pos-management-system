@@ -22,6 +22,16 @@ namespace RetailPosSystem.Controllers
             return Ok(products);
         }
 
+        [HttpGet("search")]
+        public async Task<IActionResult> SearchProducts(
+    [FromQuery] string? searchText,
+    [FromQuery] int pageNumber = 1,
+    [FromQuery] int pageSize = 10)
+        {
+            var result = await _productService.SearchProductsAsync(searchText, pageNumber, pageSize);
+            return Ok(result);
+        }
+
         [HttpGet("{id:int}")]
         public async Task<IActionResult> GetProductById(int id)
         {

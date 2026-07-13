@@ -15,5 +15,7 @@ namespace RetailPosSystem.Services.Interfaces
         Task<ProductResponseDto?> UpdateProductAsync(int id, UpdateProductDto dto);
 
         Task<bool> DeleteProductAsync(int id);
+
+        Task<ProductSearchResponseDto> SearchProductsAsync(string? searchText, int pageNumber, int pageSize);
     }
 }

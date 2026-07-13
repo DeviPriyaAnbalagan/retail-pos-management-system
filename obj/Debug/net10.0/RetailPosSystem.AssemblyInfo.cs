@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RetailPosSystem")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+560d85412ebe2c4eed2d8a4e11fb2284f86052f1")]
 [assembly: System.Reflection.AssemblyProductAttribute("RetailPosSystem")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RetailPosSystem")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
