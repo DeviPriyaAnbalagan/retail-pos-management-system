@@ -1,0 +1,69 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="obj\Debug\net10.0\.NETCoreApp,Version=v10.0.AssemblyAttributes.cs" />
+    <Compile Include="obj\Debug\net10.0\RetailPosSystem.AssemblyInfo.cs" />
+    <Compile Include="obj\Debug\net10.0\RetailPosSystem.GlobalUsings.g.cs" />
+    <Compile Include="obj\Debug\net10.0\RetailPosSystem.MvcApplicationPartsAssemblyInfo.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="obj\Debug\net10.0\RetailPosSystem.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\net10.0\rjsmcshtml.dswa.cache.json" />
+    <Content Include="obj\Debug\net10.0\rjsmrazor.dswa.cache.json" />
+    <Content Include="obj\Debug\net10.0\rpswa.dswa.cache.json" />
+    <Content Include="obj\Debug\net10.0\staticwebassets.build.endpoints.json" />
+    <Content Include="obj\Debug\net10.0\staticwebassets.build.json" />
+    <Content Include="obj\Debug\net10.0\staticwebassets.removed.txt" />
+    <Content Include="obj\project.assets.json" />
+    <Content Include="obj\RetailPosSystem.csproj.nuget.dgspec.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="10.0.9" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="10.0.9">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="10.0.9" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="10.0.9">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="10.2.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Exceptions\" />
+    <Folder Include="Middleware\" />
+    <Folder Include="obj\Debug\net10.0\staticwebassets\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="obj\Debug\net10.0\apphost.exe" />
+    <None Include="obj\Debug\net10.0\refint\RetailPosSystem.dll" />
+    <None Include="obj\Debug\net10.0\ref\RetailPosSystem.dll" />
+    <None Include="obj\Debug\net10.0\RetailPo.D6B92789.Up2Date" />
+    <None Include="obj\Debug\net10.0\RetailPosSystem.AssemblyInfoInputs.cache" />
+    <None Include="obj\Debug\net10.0\RetailPosSystem.assets.cache" />
+    <None Include="obj\Debug\net10.0\RetailPosSystem.csproj.AssemblyReference.cache" />
+    <None Include="obj\Debug\net10.0\RetailPosSystem.csproj.CoreCompileInputs.cache" />
+    <None Include="obj\Debug\net10.0\RetailPosSystem.dll" />
+    <None Include="obj\Debug\net10.0\RetailPosSystem.GeneratedMSBuildEditorConfig.editorconfig" />
+    <None Include="obj\Debug\net10.0\RetailPosSystem.genruntimeconfig.cache" />
+    <None Include="obj\Debug\net10.0\RetailPosSystem.MvcApplicationPartsAssemblyInfo.cache" />
+    <None Include="obj\Debug\net10.0\RetailPosSystem.pdb" />
+    <None Include="obj\Debug\net10.0\staticwebassets.build.json.cache" />
+    <None Include="obj\Debug\net10.0\swae.build.ex.cache" />
+    <None Include="obj\project.nuget.cache" />
+    <None Include="obj\RetailPosSystem.csproj.nuget.g.props" />
+    <None Include="obj\RetailPosSystem.csproj.nuget.g.targets" />
+  </ItemGroup>
+
+</Project>
