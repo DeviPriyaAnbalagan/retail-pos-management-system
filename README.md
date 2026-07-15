@@ -5,6 +5,13 @@ A backend Retail POS API built using **ASP.NET Core Web API**, **C#**, **SQL Ser
 This project demonstrates a basic retail POS transaction flow including product management, barcode search, sales transaction creation, VAT calculation, payment recording, stock deduction, inventory transaction tracking, and reports.
 
 ---
+## Related Frontend Repository
+
+React frontend repository:
+
+```text
+https://github.com/DeviPriyaAnbalagan/retail-pos-frontend
+```
 
 ## Why This Project Was Created
 
